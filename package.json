@@ -1,0 +1,58 @@
+{
+  "name": "awesome-copyright",
+  "version": "0.0.1",
+  "description": "Awesome copyright notice for React and VanillaJS with auto-renewal of the year.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teplostanski/awesome-copyright.git"
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"src/**/*.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run prettier && npm run lint"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "copyright",
+    "react",
+    "vanilla",
+    "ts",
+    "js",
+    "notice",
+    "vanilla js",
+    "reactjs",
+    "update",
+    "lib"
+  ],
+  "author": "Igor Teplostanski <https://teplostanski.dev> (teplostanski)",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@testing-library/react": "^13.3.0",
+    "@types/react": "^18.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "typescript": "^4.7.3"
+  }
+}
