@@ -1,1 +1,3 @@
-console.log('hi!')
+import React from './CopyrightReact'
+
+export { React }
