@@ -1,18 +1,9 @@
-export interface ICopyright {
+import { TAwesomeCopyright } from './types'
+interface IAwesomeCopyrightVanilla extends TAwesomeCopyright {
   element: HTMLDivElement
-  creatorStyle?: string
-  copyStyle?: string
-  messageStyle?: string
-  yearStyle?: string
-  message?: string
-  styles?: string
-  creator?: string
-  copy?: any
-  year?: number | string
-  yearOnly?: boolean
 }
 
-const CopyrightVanilla = (args: ICopyright) => {
+const CopyrightVanilla = (args: IAwesomeCopyrightVanilla) => {
   const currentYear = new Date().getFullYear()
 
   const years = (from: number | string, only: boolean) => {

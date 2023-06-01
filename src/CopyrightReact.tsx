@@ -1,20 +1,8 @@
 /* eslint-disable eqeqeq */
+import { TAwesomeCopyright } from './types'
 import React from 'react'
 
-export type IAwesomeCopyright = {
-  creatorStyle?: string
-  copyStyle?: string
-  messageStyle?: string
-  yearStyle?: string
-  message?: string
-  styles?: string
-  creator?: string
-  copy?: any
-  year?: number | string | undefined
-  yearOnly?: boolean | undefined
-}
-
-const CopyrightReact = (props: IAwesomeCopyright) => {
+const CopyrightReact = (props: TAwesomeCopyright) => {
   const copyDefault = String.fromCodePoint(0x000a9)
   const currentYear = new Date().getFullYear()
 

@@ -43,8 +43,8 @@ root.render(
       <footer>
 
         <Copyright.React // Use React component
-          year={2022} // Required parameter. Year of copyright start Accepts a string or a number
-          yearOnly={false} // Required parameter. Show only the Year the copyright started. It is disabled by default and if the current year differs from the year of the beginning, it shows the years in the format '2000-2023' . Takes a Boolean value.
+          year={2022} // Year of copyright start Accepts a string or a number
+          yearOnly={false} // Show only the Year the copyright started. It is disabled by default and if the current year differs from the year of the beginning, it shows the years in the format '2000-2023' . Takes a Boolean value.
           creator="Igor Teplostanski" // Name of the copyright holder. Accepts a string.
           message="By" // The text before the creator 's name .Accepts a string.
           styles="copyright" // Styles the root block of the component. Accepts a string with the CSS class name/names
