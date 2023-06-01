@@ -1,6 +1,6 @@
 {
   "name": "awesome-copyright",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Awesome copyright notice for React and VanillaJS with auto-renewal of the year.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

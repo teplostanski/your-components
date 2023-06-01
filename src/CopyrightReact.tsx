@@ -1,6 +1,5 @@
 /* eslint-disable eqeqeq */
 import React from 'react'
-//import React from 'react'
 
 export type IAwesomeCopyright = {
   creatorStyle?: string
@@ -11,16 +10,22 @@ export type IAwesomeCopyright = {
   styles?: string
   creator?: string
   copy?: any
-  year: number | string
-  yearOnly: boolean
+  year?: number | string | undefined
+  yearOnly?: boolean | undefined
 }
 
 const CopyrightReact = (props: IAwesomeCopyright) => {
   const copyDefault = String.fromCodePoint(0x000a9)
+  const currentYear = new Date().getFullYear()
 
-  const years = (from: number | string, only: boolean) => {
-    const to = new Date().getFullYear()
-    return only || from == to ? `${from}` : `${from} - ${to}`
+  const years = (from: number | string | undefined, only: boolean | undefined) => {
+    if (from == undefined) {
+      return currentYear
+    } else if (only || from == currentYear) {
+      return `${from}`
+    } else {
+      return `${from} - ${currentYear}`
+    }
   }
 
   console.log(years(2023, false))

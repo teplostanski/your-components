@@ -1,3 +1,4 @@
 import React from './CopyrightReact'
+import Vanilla from './CopyrightVanilla'
 
-export { React }
+export { React, Vanilla }
