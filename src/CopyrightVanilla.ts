@@ -1,6 +1,6 @@
 import { TAwesomeCopyright } from './types'
 interface IAwesomeCopyrightVanilla extends TAwesomeCopyright {
-  element: HTMLDivElement
+  element: string
 }
 
 const CopyrightVanilla = (args: IAwesomeCopyrightVanilla) => {
@@ -26,10 +26,11 @@ const CopyrightVanilla = (args: IAwesomeCopyrightVanilla) => {
       },
       args,
     )
-  element.insertAdjacentHTML('beforeend', `<span class=${messageStyle}>${message}</span> `)
-  element.insertAdjacentHTML('beforeend', `<span class=${creatorStyle}>${creator}</span> `)
-  element.insertAdjacentHTML('beforeend', `<span class=${copyStyle}>${copy}</span> `)
-  element.insertAdjacentHTML('beforeend', `<span class=${yearStyle}>${years(year, yearOnly)}</span> `)
+  const el = document.querySelector<HTMLDivElement>(element)!
+  el.insertAdjacentHTML('beforeend', `<span class=${messageStyle}>${message}</span> `)
+  el.insertAdjacentHTML('beforeend', `<span class=${creatorStyle}>${creator}</span> `)
+  el.insertAdjacentHTML('beforeend', `<span class=${copyStyle}>${copy}</span> `)
+  el.insertAdjacentHTML('beforeend', `<span class=${yearStyle}>${years(year, yearOnly)}</span> `)
 }
 
 export default CopyrightVanilla

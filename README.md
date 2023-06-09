@@ -1,11 +1,10 @@
 # awesome-copyright
 
-[![NPM version][npm-image]][npm-url]
-[![Build][github-build]][github-build-url]
-![npm-typescript]
-[![License][github-license]][github-license-url]
+![npm](https://img.shields.io/npm/v/awesome-copyright?color=%2370bd2d&style=for-the-badge)
+![npm type definitions](https://img.shields.io/npm/types/awesome-copyright?style=for-the-badge)
+![NPM](https://img.shields.io/npm/l/awesome-copyright?style=for-the-badge)
 
-Awesome copyright notice for Kuse and VanillaJS with auto-renewal of the year.
+Awesome copyright notice for React and VanillaJS with auto-renewal of the year.
 
 ## What is it for?
 
@@ -30,7 +29,7 @@ yarn add awesome-copyright
 
 Add `Copyright` to your component:
 
-```js
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -43,12 +42,12 @@ root.render(
       <footer>
 
         <Copyright.React // Use React component
-          year={2022} // Year of copyright start Accepts a string or a number
-          yearOnly={false} // Show only the Year the copyright started. It is disabled by default and if the current year differs from the year of the beginning, it shows the years in the format '2000-2023' . Takes a Boolean value.
-          creator="Igor Teplostanski" // Name of the copyright holder. Accepts a string.
-          message="By" // The text before the creator 's name .Accepts a string.
-          styles="copyright" // Styles the root block of the component. Accepts a string with the CSS class name/names
-          creatorStyle="copyright__creator" // Стилизует корневой блок с именем создателя Принимает строку с именем/именами CSS класса
+          year={2022}
+          yearOnly={false}
+          creator="Igor Teplostanski"
+          message="By"
+          styles="copyright"
+          creatorStyle="copyright__creator"
         />
 
       </footer>
@@ -58,10 +57,32 @@ root.render(
 
 ```
 
-[npm-url]: https://www.npmjs.com/package/awesome-copyright
-[npm-image]: https://img.shields.io/npm/v/awesome-copyright
-[github-license]: https://img.shields.io/github/license/teplodtanski/awesome-copyright
-[github-license-url]: https://github.com/teplodtanski/awesome-copyright/blob/main/LICENSE.md
-[github-build]: https://github.com/teplodtanski/awesome-copyright/actions/workflows/publish.yml/badge.svg
-[github-build-url]: https://github.com/teplodtanski/awesome-copyright/actions/workflows/publish.yml
-[npm-typescript]: https://img.shields.io/npm/types/awesome-copyright
+### In Vanilla JS
+
+Add `Copyright` to your component:
+
+```js
+import * as Copyright from "awesome-copyright";
+
+Copyright.Vanilla({ // Use Vanilla js
+  element: '#copyright',
+  yearOnly: false,
+  yearStyle: 'test',
+});
+
+```
+
+| Params       | Type          | Example       | Default state                   | Description                                                                                                                                                                      |
+| ------------ | ------------- | ------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| year         | string/number | 2023/"2023"   | current year                    | Year of copyright start                                                                                                                                                          |
+| yearOnly     | boolean       | true/false    | false                           | Show only the Year the copyright started. It is disabled by default and if the current year differs from the year of the beginning, it shows the years in the format '2000-2023' |
+| creator      | string        | "John Doe"    | ""                              | Name of the copyright holder.                                                                                                                                                    |
+| copy         | string        | "®"           | "©"                             | Copyright symbol                                                                                                                                                                 |
+| message      | string        | "Create by"   | ""                              | The text before the creator 's name                                                                                                                                              |
+| styles       | srting        | "copyright"   | "" ( Only for React component ) | Styles the root block of the component. Accepts a string with the CSS class name/names                                                                                           |
+| yearStyle    | string        | "year"        | ""                              | Styles the year block of the component. Accepts a string with the CSS class name/names                                                                                           |
+| messageStyle | string        | "message"     | ""                              | Styles the message block of the component. Accepts a string with the CSS class name/names name                                                                                   |
+| copyStyle    | string        | "copy-symbol" | ""                              | Styles the copy symobl block of the component. Accepts a string with the CSS class name/names                                                                                    |
+| creatorStyle | string        | "name"        | ""                              | Styles the creator block of the component. Accepts a string with the CSS class name/names                                                                                        |
+| element      | string        | "#copyright"  | Required parameter for Vanilla  | HTML element id                                                                                                                                                                  |
+
