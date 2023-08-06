@@ -4,12 +4,7 @@
 ![npm type definitions](https://img.shields.io/npm/types/@your-components/copyright?style=for-the-badge)
 ![NPM](https://img.shields.io/npm/l/@your-components/copyright?style=for-the-badge)
 
-Awesome copyright notice for React and VanillaJS with auto-renewal of the year.
-
-## What is it for?
-
-There is only one practical application - to create copyright notices with automatic replacement of the copyright renewal year.
-This is an npm test package created for one purpose - to learn how to create npm packages.
+A simple and versatile copyright component with auto-update of the year for use in React, Vanilla js, Node.js projects and via CDN and much more
 
 ## Installation:
 
