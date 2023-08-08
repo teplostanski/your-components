@@ -7,6 +7,11 @@
 
 A simple and versatile copyright component with auto-update of the year for use in ***React***, ***Vanilla js***, ***Node.js*** projects and via ***CDN*** and much more
 
+> The philosophy of "your-components":
+> _"The user has the right to freedom of action."_
+
+This means that the components contain only business logic and do not contain a single line of styles. The components are minimalistic, flexible configurable and do not restrict the user in actions.
+
 ## Installation:
 
 ```bash
