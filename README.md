@@ -11,4 +11,4 @@ This means that the components contain only business logic and do not contain a 
 
 | name                               | use                             | description                                                                           |
 | ---------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------- |
-| [copyright](./packages/copyright/) | React, Vanilla js, Node.js, CDN | A simple and versatile copyright component with auto-update of the year and much more |
+| [copyright](./packages/copyright/) | React, Vanilla js(class, function and custom elements), Node.js, CDN | A simple and versatile copyright component with auto-update of the year and much more |
