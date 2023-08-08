@@ -1,10 +1,10 @@
 import { TCopyright } from '../types'
 
-const getYearsString = (array: number[]) => {
+const getYearsString = (value: number[]) => {
   const size = 2
   const subarray = []
-  for (let i = 0; i < Math.ceil(array.length / size); i++) {
-    subarray[i] = array.sort().slice(i * size, i * size + size)
+  for (let i = 0; i < Math.ceil(value.length / size); i++) {
+    subarray[i] = value.sort().slice(i * size, i * size + size)
   }
   return subarray.map(([first, second]) => (second ? ` ${first}-${second}` : ` ${first}`)).toString()
 }

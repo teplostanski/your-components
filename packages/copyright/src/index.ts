@@ -1,4 +1,4 @@
-import Copyright from './react'
-import copyright from './vanilla'
+import CopyrightReact from './react'
+import { CopyrightClassComponent } from './vanilla'
 
-export { Copyright, copyright }
+export { CopyrightReact, CopyrightClassComponent }

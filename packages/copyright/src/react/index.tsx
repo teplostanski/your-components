@@ -1,18 +1,12 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import { copyright } from '../core'
-import { TCopyright } from '../types'
+import { IReact } from '../types'
 
-interface ICopyright extends TCopyright {
-  style?: string
-  className?: string
-  children?: ReactElement
-}
-
-const Copyright = ({ style, className, children, copymark, year, years, current }: ICopyright) => {
+const Copyright = ({ style, className, children, copymark, year, years, current }: IReact) => {
   return (
-    <div className={style || className}>
+    <span className={style || className}>
       {children} {copyright({ copymark, year, years, current })}
-    </div>
+    </span>
   )
 }
 
