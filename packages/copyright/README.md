@@ -25,5 +25,5 @@ yarn add @your-components/copyright
 ```
 
 ## Docs
-- [v2.x [current]](./docs/v2.x.md)
-- [v1.x](./docs/v1.x.md)
+- [v2.x [current]](https://github.com/teplostanski/your-components/blob/main/packages/copyright/docs/v2.x.md)
+- [v1.x](https://github.com/teplostanski/your-components/blob/main/packages/copyright/docs/v1.x.md)
