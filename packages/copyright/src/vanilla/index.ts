@@ -1,4 +1,4 @@
 import CopyrightClassComponent from './class-component'
-//import Function from './func-component'
+import CopyrightFuncComponent from './func-component'
 
-export { CopyrightClassComponent }
+export { CopyrightClassComponent, CopyrightFuncComponent }
