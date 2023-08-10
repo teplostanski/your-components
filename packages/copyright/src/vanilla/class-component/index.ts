@@ -1,7 +1,7 @@
 import { copyright } from '../../core'
 import { IVanilla } from '../../types'
 
-class CopyrightClassComponent {
+class Copyright {
   year: string | number | undefined
   years: string | number[] | undefined
   current: string | boolean | undefined
@@ -27,4 +27,4 @@ class CopyrightClassComponent {
   }
 }
 
-export default CopyrightClassComponent
+export default Copyright
