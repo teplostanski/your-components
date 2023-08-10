@@ -5,25 +5,23 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/teplostanski/your-components.git"
-  },
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,ts,jsx,tsx}\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run prettier && npm run lint"
+    "prepublishOnly": "rm -rf dist && npm run build && npm run prettier && cp -r dist/* ./",
+    "postpublish": "rm -rf cjs esm"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "files": [
-    "dist",
-    "LICENSE",
+    "esm",
+    "cjs",
+    "LICENSE.md",
     "README.md"
   ],
   "keywords": [
@@ -38,7 +36,20 @@
     "update",
     "lib"
   ],
-  "author": "Igor Teplostanski <https://teplostanski.dev> (teplostanski)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teplostanski/your-components/tree/main/packages/copyright.git"
+  },
+  "author": {
+    "name": "Igor Teplostanski",
+    "email": "teplostanski@yandex.ru",
+    "url": "https://teplostanski.dev"
+  },
+  "homepage": "https://github.com/teplostanski/your-components/tree/main/packages/copyright/README.md",
+  "bugs": {
+    "url": "https://github.com/teplostanski/your-components/issues",
+    "email": "teplostanski@yandex.ru"
+  },
   "license": "GPL-3.0-only",
   "devDependencies": {
     "@testing-library/react": "^13.3.0",

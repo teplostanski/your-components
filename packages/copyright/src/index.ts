@@ -1,4 +1,7 @@
-import CopyrightReact from './react'
-import { CopyrightClassComponent } from './vanilla'
+import react from './react'
+import { CopyrightClassComponent as classComponent } from './vanilla'
+import { copyright as core } from './core'
 
-export { CopyrightReact, CopyrightClassComponent }
+const Copyright = Object.assign({}, { react, classComponent, core })
+
+export default Copyright
