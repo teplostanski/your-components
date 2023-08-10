@@ -10,7 +10,7 @@ export type TCopyright = {
 export interface IReact extends TCopyright {
   style?: string
   className?: string
-  children?: ReactElement
+  children?: ReactElement | ReactElement[]
 }
 
 export interface IVanilla extends TCopyright {
