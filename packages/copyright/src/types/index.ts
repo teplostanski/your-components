@@ -1,9 +1,9 @@
 import { ReactElement } from 'react'
 
 export type TCopyright = {
-  years?: number[] | undefined
-  year?: number | undefined
-  current?: boolean | undefined
+  years?: number[] | string | undefined
+  year?: number | string | undefined
+  current?: boolean | string | undefined
   copymark?: string | boolean
 }
 
