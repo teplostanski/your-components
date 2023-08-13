@@ -8,7 +8,7 @@ export type TCopyright = {
 }
 
 export interface IReact extends TCopyright {
-  style?: string
+  style?: object | undefined
   className?: string
   children?: ReactElement | ReactElement[]
 }

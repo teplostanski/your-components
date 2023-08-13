@@ -71,9 +71,5 @@ const getCurrentYear = (year: number | string | undefined, current: boolean | st
 }
 
 export const copyright = ({ years = [], year, current = true, copymark = String.fromCodePoint(0x000a9) }: TCopyright) => {
-  try {
-    return `${copymark ? copymark : ''}${getYearsString(years)} ${getCurrentYear(year, current)}`
-  } catch (error) {
-    return error
-  }
+  return `${copymark ? copymark : ''}${getYearsString(years)} ${getCurrentYear(year, current)}`
 }

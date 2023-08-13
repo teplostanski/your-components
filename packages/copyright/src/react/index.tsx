@@ -4,7 +4,7 @@ import { IReact } from '../types'
 
 const Copyright = ({ style, className, children, copymark, year, years, current }: IReact) => {
   return (
-    <span className={style || className}>
+    <span className={className} style={style}>
       {children} {copyright({ copymark, year, years, current })}
     </span>
   )
