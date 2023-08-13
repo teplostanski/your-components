@@ -16,3 +16,7 @@ export interface IReact extends TCopyright {
 export interface IVanilla extends TCopyright {
   element: string | null
 }
+
+export interface IDataset extends Element {
+  dataset: any
+}
